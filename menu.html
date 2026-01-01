@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Grill Master African Restaurant - Menu</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="logo-edited.jpeg" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="style.css" />
+
+    <!-- Google Fonts -->
+    <script
+      src="https://kit.fontawesome.com/1ac6c6649a.js"
+      crossorigin="anonymous"></script>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  </head>
+  <style>
+    .tab-bar {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      width: fit-content;
+      border-radius: 25px;
+      margin-top: 2rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid rgb(147, 143, 143);
+      padding-bottom: 5px;
+      align-self: center;
+      position: sticky;
+      z-index: 100;
+      top: 16%;
+      left: 35%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(146, 140, 140, 0.124);
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: black;
+      transition: all 0.3s ease;
+      border-radius: 30px;
+    }
+
+    .tab-btn.active {
+      background-color: #ab3d30;
+      color: white;
+    }
+
+    .tab-btn:hover:not(.active) {
+      color: #ae4c41;
+      background-color: #ffeef0;
+    }
+
+    /* Tab Content Logic */
+    .tab-content {
+      display: none; /* Hide all by default */
+      animation: fadeIn 0.5s ease;
+    }
+
+    .tab-content.active {
+      display: grid; /* Show only active */
+    }
+  </style>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <img
+        src="gm-logo.png"
+        alt="Loading" />
+    </div>
+    <!-- Header / Navigation -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg fixed-top navbar-light"
+        id="main-navbar">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="index.html">
+            <span class="gm-logo">
+              <img
+                src="gm-logo.png"
+                alt="Grill Master "
+                class="logo-img" />
+            </span>
+          </a>
+
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+            aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <div
+            class="collapse navbar-collapse d-none d-lg-flex justify-content-center"
+            id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="menu.html"
+                  >Menu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="about.html"
+                  >About Us</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu (Offcanvas) -->
+    <div
+      class="offcanvas offcanvas-end d-lg-none"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <a href="index.html">
+          <span class="gm-logo">
+            <img
+              src="gm-logo.png"
+              alt="Grill Master "
+              class="logo-img" />
+          </span>
+        </a>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
+        <nav class="nav flex-column text-center">
+          <a
+            class="nav-link"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="nav-link active"
+            href="menu.html"
+            >Menu</a
+          >
+          <a
+            class="nav-link"
+            href="about.html"
+            >About Us</a
+          >
+          <a
+            class="nav-link"
+            href="contact.html"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <!-- Sticky "Order" Button -->
+    <a
+      href="https://wa.link/w0wid0"
+      class="sticky-order-button">
+      <i class="fa-solid fa-bag-shopping"></i>Order Now
+    </a>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Menu Header -->
+      <section class="page-header mask text-center">
+        <div class="container">
+          <h1 class="section-heading"><span class="section-heading-accent">Our</span>Menu</h1>
+          <p class="section-subheading">Authentic flavors, tender & tasty griling. All dishes are prepared fresh with the finest ingredients.</p>
+        </div>
+      </section>
+
+      <!-- Menu Items -->
+      <div class="tab-bar">
+        <button
+          class="tab-btn active"
+          onclick="openTab(event, 'grilled')">
+          Grills
+        </button>
+        <button
+          class="tab-btn"
+          onclick="openTab(event, 'meals')">
+          Meals
+        </button>
+        <button
+          class="tab-btn"
+          onclick="openTab(event, 'beverage')">
+          Beverages
+        </button>
+      </div>
+      <div class="menu-items pt-0">
+        <div class="container">
+          <!-- Category: From the Grill -->
+          <div class="menu-category fade-in-section">
+            <div
+              id="grilled"
+              class="tab-content active">
+              <h2>From the Grill</h2>
+              <div class="row g-4">
+                <!-- New Menu Items Added Below -->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="grilled-chicken.png"
+                      alt="grilled chicken" />
+                    <div class="menu-item-card-body">
+                      <h4>Grilled Chicken</h4>
+                      <p>Smoky, flame-grilled chicken, well prepared with spices. Perfect for sharing.</p>
+                      <div class="price">
+                        <span class="size">A quater<span class="amount"> $15</span></span>
+                        <span class="size">Half <span class="amount"> $25</span></span>
+                        <span class="size">Full<span class="amount"> $40</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New Menu Items Added Below -->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="pork-ribs.jpg"
+                      alt="port-ribs" />
+                    <div class="menu-item-card-body">
+                      <h4>Pork Ribs</h4>
+                      <p>Pork ribs are cooked until they are juicy and tender with crispy edges, then lightly charred to add flavor.</p>
+                      <div class="price">
+                        <span class="size">Ribs<span class="amount"> $15</span></span>
+                        <span class="size">Small Tray<span class="amount"> $80</span></span>
+                        <span class="size">Large Tray<span class="amount"> $200</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New Menu Items Added Below -->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="grilled-mackerel.jpg"
+                      alt="Grilled Mackerel" />
+                    <div class="menu-item-card-body">
+                      <h4>Grilled Mackerel (Maquereau)</h4>
+                      <p>
+                        Whole mackerel, marinated in traditional spices and grilled over charcoal. Served with spicy pepper sauce and your choice of
+                        side.
+                      </p>
+                      <div class="price">
+                        <span class="size">Full<span class="amount">$25</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New Menu Items Added Below -->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="soya.jpg"
+                      alt="Soya" />
+                    <div class="menu-item-card-body">
+                      <h4>Suya (Beef)</h4>
+                      <p>Tender cuts of beef, generously coated in a nutty spice blend and grilled. Served with fresh onions and tomato.</p>
+                      <div class="price">
+                        <span class="size">Plate<span class="amount">$15</span></span>
+                        <span class="size">Small Tray<span class="amount">$100</span></span>
+                        <span class="size">Large Tray<span class="amount">$250</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New Menu Items Added Below -->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="goat-suya.jpeg"
+                      alt="Goat suya" />
+                    <div class="menu-item-card-body">
+                      <h4>Suya (Goat)</h4>
+                      <p>Tender cuts of goat meet, coated in a earthy spice blendand grilled. Served with fresh onions and tomato.</p>
+                      <div class="price">
+                        <span class="size">Plate<span class="amount">$15</span></span>
+                        <span class="size">Small Tray<span class="amount">$100</span></span>
+                        <span class="size">Large Tray<span class="amount">$250</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New Menu Items Added Below -->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="grilled-tilapia.jpg"
+                      alt="Grilled Tilapia" />
+                    <div class="menu-item-card-body">
+                      <h4>Grilled Tilapia</h4>
+                      <p>A fresh, whole tilapia seasoned with ginger, garlic, and herbs, grilled slowly for a smoky flavor. A fan favorite!</p>
+                      <div class="price">
+                        <span class="size">Small<span class="amount">$20</span></span>
+                        <span class="size">Large<span class="amount">$25</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New Menu Items Added Below -->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="drum-fish.jpeg"
+                      alt="Drum Fish" />
+                    <div class="menu-item-card-body">
+                      <h4>Drum Fish</h4>
+                      <p>A fresh, whole tilapia seasoned with ginger, garlic, and herbs, grilled slowly for a smoky flavor. A fan favorite!</p>
+                      <div class="price">
+                        <span class="size">Small<span class="amount">$20</span></span>
+                        <span class="size">Large<span class="amount">$25</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Category: Traditional Dishes -->
+      <div class="menu-items pt-0">
+        <div class="container">
+          <div class="menu-category fade-in-section">
+            <div
+              id="meals"
+              class="tab-content"
+              class="menu-category mt-5 pt-4 fade-in-section">
+              <h2>Tasty Meals</h2>
+              <div class="row g-4">
+                <!-- New item-->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="pepper-soup.jpg"
+                      alt="Pepper Soup" />
+                    <div class="menu-item-card-body">
+                      <h4>Pepper Soup</h4>
+                      <p>
+                        With each spoon, this warm, aromatic pepper soup with a comforting base and fresh spices embraces you in warmth. With tender
+                        meats.
+                      </p>
+                      <div class="price">
+                        <span class="size">Goat<span class="amount">$25</span></span>
+                        <span class="size">Cow foot<span class="amount">$22</span></span>
+                        <span class="size">Fish<span class="amount">$22</span></span>
+                        <span class="size">Assorted<span class="amount">$25</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--New item-->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="Eru.jpg"
+                      alt="Water Fufu and Eru" />
+                    <div class="menu-item-card-body">
+                      <h4>Water Fufu and Eru</h4>
+                      <p>
+                        A classic combination. Soft, pounded fufu served with a marvelous soup of finely shredded Eru leaves, cooked with palm oil,
+                        smoked fish, beef and kanda (beef skin).
+                      </p>
+                      <div class="price">
+                        <span class="size">Plate<span class="amount">$22</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New item-->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="jollof rice.jpg"
+                      alt="jollof Rice" />
+                    <div class="menu-item-card-body">
+                      <h4>Jollof Rice</h4>
+                      <p>
+                        Party jollof, stir-fried with fresh vegetables, shrimp, meat, and a unique blend of spices. A perfect companion to any belly.
+                      </p>
+                      <div class="price">
+                        <span class="size">Beef<span class="amount">$22</span></span>
+                        <span class="size">Chicken<span class="amount">$22</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New item-->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="katikati.jpg"
+                      alt="Khati Khati" />
+                    <div class="menu-item-card-body">
+                      <h4>Kati kati with fufu</h4>
+                      <p>
+                        A dish of smoky grilled chicken, huckleberry and fufu made from corn. Marinated in spices and palm oil, the chicken is grilled
+                        till it’s charred on the edges,juicy inside and cooked deligently.
+                      </p>
+                      <div class="price">
+                        <span class="size">Plate<span class="amount">$22</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New item-->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="Okra.png"
+                      alt="Okra soup" />
+                    <div class="menu-item-card-body">
+                      <h4>Okra soup</h4>
+                      <p>A delicios & soothing soup with a complex sweeet taste. Made from fresh Okra, with Meat and fresh spices.</p>
+                      <div class="price">
+                        <span class="size">Beef<span class="amount">$22</span></span>
+                        <span class="size">Goat<span class="amount">$25</span></span>
+                        <span class="size">Assorted<span class="amount">$25</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New item-->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="achu.jpg"
+                      alt="Pepper Soup" />
+                    <div class="menu-item-card-body">
+                      <h4>Achu</h4>
+                      <p>
+                        A creamy, golden-yellow base made with palm oil, a special spice blend, and enriched with meats like beef, towel and cow skin;
+                        served with pounded cocoyam. It’s simple, earthy and deeply comforting.
+                      </p>
+                      <div class="price">
+                        <span class="size">Plate<span class="amount">$22</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New item-->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="egusi-soup.png"
+                      alt="Egusi Soup" />
+                    <div class="menu-item-card-body">
+                      <h4>Egusi Soup</h4>
+                      <p>
+                        An african signature. Egusi soup is a thick, hearty blend made from ground melon seeds cooked with spices, leafy greens, and
+                        your choice of meat. It’s rich, spicy, and satisfying
+                      </p>
+                      <div class="price">
+                        <span class="size">Beef<span class="amount">$22</span></span>
+                        <span class="size">Goat<span class="amount">$25</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New item-->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="rice-stew.png"
+                      alt="Rice and stew" />
+                    <div class="menu-item-card-body">
+                      <h4>Rice and Stew</h4>
+                      <p>
+                        A classic dish of white rice served with a rich, flavorful tomato stew made with fresh vegetables and your choice of meat.
+                      </p>
+                      <div class="price">
+                        <span class="size">Beef<span class="amount">$20</span></span>
+                        <span class="size">chicken<span class="amount">$18</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- New item-->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="menu-item-card">
+                    <img
+                      src="pomo.png"
+                      alt="Pomo" />
+                    <div class="menu-item-card-body">
+                      <h4>Pomo (Kanda) Soup</h4>
+                      <p></p>
+                      <div class="price">
+                        <span class="size">Beef<span class="amount">$20</span></span>
+                        <span class="size">chicken<span class="amount">$18</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Category: Beverages -->
+      <div
+        id="Beverages"
+        class="bvg">
+        <div class="bvg-card">
+          <h4>Mineral Water</h4>
+          <span>$2</span>
+        </div>
+        <div class="bvg-card">
+          <h4>Malta</h4>
+          <span>$4</span>
+        </div>
+        <div class="bvg-card">
+          <h4>Can Soda</h4>
+          <span>$2</span>
+        </div>
+        <div class="bvg-card">
+          <h4>D'jino Cocktail</h4>
+          <span>$10</span>
+        </div>
+        <div class="bvg-card">
+          <h4>Pamplemouse</h4>
+          <span>$10</span>
+        </div>
+        <div class="bvg-card">
+          <h4>Grenadine</h4>
+          <span>$10</span>
+        </div>
+        <div class="bvg-card">
+          <h4>Red Bull</h4>
+          <span>$10</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="fade-in-section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="logo-bg d-inline-block mb-3">
+              <span class="gm-logo">
+                <img
+                  src="gm-logo.png"
+                  alt="Grill Master "
+                  class="logo-img" />
+              </span>
+            </div>
+            <p class="mb-3">The authentic taste of Africa, grilled to perfection. Join us for a memorable dining experience.</p>
+            <div class="social-icons">
+              <a
+                href="https://www.tiktok.com/@grillmaster992?lang=en"
+                aria-label="Tiktok"
+                ><i class="fa-brands fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="https://wa.link/w0wid0">Place order</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5>Explore</h5>
+            <ul class="list-unstyled">
+              <li><a href="impression.html">Impression</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Catering</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li class="d-flex">
+                <i class="bi bi-geo-alt-fill me-3 mt-1"></i>
+                <span>9755 S Kirkwood Rd D, Houston, TX 77099</span>
+              </li>
+              <li class="d-flex">
+                <i class="bi bi-telephone-fill me-3 mt-1"></i>
+                <a href="tel:+13464915054">+13464915054</a>
+              </li>
+              <li class="d-flex">
+                <i class="bi bi-envelope-fill me-3 mt-1"></i>
+                <a href="mailto:grillmasterafrica@gmail.com">grillmasterafrica@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row footer-bottom">
+          <div class="col-12 text-center">
+            <p
+              class="mb-0"
+              style="color: rgba(255, 255, 255, 0.7)">
+              &copy; <span id="current-year"></span> Grill Master African Restaurant. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function openTab(evt, tabName) {
+        // 1. Hide all tab contents
+        const contents = document.getElementsByClassName('tab-content');
+        for (let i = 0; i < contents.length; i++) {
+          contents[i].classList.remove('active');
+        }
+
+        // 2. Deactivate all buttons
+        const buttons = document.getElementsByClassName('tab-btn');
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove('active');
+        }
+
+        // 3. Show current tab and add 'active' class to button
+        document.getElementById(tabName).classList.add('active');
+        evt.currentTarget.classList.add('active');
+      }
+    </script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="preloader.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
